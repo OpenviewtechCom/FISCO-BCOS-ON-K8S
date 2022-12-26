@@ -111,3 +111,5 @@ kubectl apply -f "$k8sYamlDir/agencyB/gateway/service.yaml" -n "$k8sNamespace"
 
 - console链接 区块链，使用 service 导出的 rpc 地址
     ![](3.png)
+
+    \* **注意** 如果console所在网络和 k8s service 网络不通，可以考虑使用ingress做端口转发
