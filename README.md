@@ -20,6 +20,12 @@
 
 依赖工具：kubectl
 
+### 0.clone本仓库
+```shell
+git clone https://github.com/OpenviewtechCom/FISCO-BCOS-ON-K8S.git
+cd FISCO-BCOS-ON-K8S
+```
+
 ### 1.下载官方 BcosBuilder 工具
 ```shell
 cd fisco
