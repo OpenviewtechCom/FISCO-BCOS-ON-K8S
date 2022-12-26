@@ -1,0 +1,4 @@
+build.sh
+Makefile
+*.tgz
+bin/back/**
