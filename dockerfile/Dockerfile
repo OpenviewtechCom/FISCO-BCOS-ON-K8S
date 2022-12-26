@@ -3,7 +3,7 @@ ARG BaseImage
 FROM ${BaseImage}
 
 # 解决问题：https://github.com/FISCO-BCOS/FISCO-BCOS/issues/3276
-RUN sed 's/MinProtocol = TLSv1.2/MinProtocol = TLSv1/g' /etc/ssl/openssl.cnf
+RUN sed -i 's/MinProtocol = TLSv1.2/MinProtocol = TLSv1/g' /etc/ssl/openssl.cnf
 
 ARG ServerType
 ARG BIN
