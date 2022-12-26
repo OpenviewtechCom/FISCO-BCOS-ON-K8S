@@ -1,0 +1,17 @@
+apiVersion: k8s.tars.io/v1beta3
+kind: TConfig
+metadata:
+  name: _configName_
+  labels:
+    tars.io/Activated: "true"
+    tars.io/ConfigName: _filename_
+    tars.io/PodSeq: "_seq_"
+    tars.io/ServerApp: _app_
+    tars.io/ServerName: _server_
+
+app: _app_
+server: _server_
+podSeq: "_seq_"
+configName: _filename_
+activated: true
+configContent: |

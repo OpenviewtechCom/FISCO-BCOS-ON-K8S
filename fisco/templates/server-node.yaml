@@ -1,0 +1,59 @@
+apiVersion: k8s.tars.io/v1beta3
+kind: TServer
+metadata:
+  annotations:
+    tars.io/MinReplicas: "1"
+  labels:
+    tars.io/ServerApp: _app_
+    tars.io/ServerName: BcosNodeService
+    tars.io/SubType: tars
+    tars.io/Template: tars.cpp
+  name: _app_-bcosnodeservice
+spec:
+  app: _app_
+  server: BcosNodeService
+
+  k8s:
+    replicas: 1
+
+    env:
+      - name: Namespace
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.namespace
+      - name: PodName
+        valueFrom:
+          fieldRef:
+            fieldPath: metadata.name
+
+    # mounts:
+    #   - mountPath: /usr/local/app/tars/app_log
+    #     name: host-log-dir
+    #     readOnly: false
+    #     subPathExpr: $(Namespace)/$(PodName)
+    #     source:
+    #       hostPath:
+    #         path: /usr/local/app/tars/app_log
+    #         type: DirectoryOrCreate
+
+  release:
+    id: v3.1.1
+    image: degfy/fisco-bcos-node:v3.1.1
+    nodeImage: docker.io/tarscloud/tars.tarsnode:v1.4.0
+
+  subType: tars
+  tars:
+    template: tars.cpp
+    servants:
+      - name: FrontServiceObj
+        port: 10000
+      - name: LedgerServiceObj
+        port: 10001
+      - name: PBFTServiceObj
+        port: 10002
+      - name: SchedulerServiceObj
+        port: 10003
+      - name: TxPoolServiceObj
+        port: 10004
+
+
