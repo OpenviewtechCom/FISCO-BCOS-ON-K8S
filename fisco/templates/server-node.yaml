@@ -8,7 +8,7 @@ metadata:
     tars.io/ServerName: BcosNodeService
     tars.io/SubType: tars
     tars.io/Template: tars.cpp
-  name: _app_-bcosnodeservice
+  name: _appl_-bcosnodeservice
 spec:
   app: _app_
   server: BcosNodeService

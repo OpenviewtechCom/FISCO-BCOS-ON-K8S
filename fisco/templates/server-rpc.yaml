@@ -6,7 +6,7 @@ metadata:
     tars.io/ServerName: BcosRpcService
     tars.io/SubType: tars
     tars.io/Template: tars.cpp
-  name: _app_-bcosrpcservice
+  name: _appl_-bcosrpcservice
 spec:
   app: _app_
   server: BcosRpcService

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: export-_name_
+spec:
+  type: ClusterIP
+  ports:
+  - name: export
+    port: _port_
+    protocol: TCP
+    targetPort: _port_
+  selector:
+    tars.io/ServerApp: _agency_
+    tars.io/ServerName: _service_

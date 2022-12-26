@@ -53,6 +53,27 @@ copyServer(){
 	cp $inputfile $outputfile
 
 	sed -i "" "s/_app_/$app/" $outputfile
+
+	appl=`echo $app| tr 'A-Z' 'a-z'`
+
+	sed -i "" "s/_appl_/$appl/" $outputfile
+}
+
+serviceYaml(){
+	outputfile=$1
+
+	agencyName=$2
+	serviceName=$3
+	servicePort=$4
+
+	cp "templates/service.yaml" "$outputfile"
+
+	sed -i "" "s/_port_/$servicePort/" $outputfile
+	sed -i "" "s/_agency_/$agencyName/" $outputfile
+	sed -i "" "s/_service_/$serviceName/" $outputfile
+
+	name=`echo "$agencyName-$serviceName"| tr 'A-Z' 'a-z'`
+	sed -i "" "s/_name_/$name/" $outputfile
 }
 
 

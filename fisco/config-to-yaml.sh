@@ -16,4 +16,4 @@ gatewayConfig "$originConfigDir" "$k8sYamlDir" "$chainId" "agencyA"
 gatewayConfig "$originConfigDir" "$k8sYamlDir" "$chainId" "agencyB"
 
 nodeConfig "$originConfigDir" "$k8sYamlDir" "$chainId" "agencyA" "$groupId" "node0"
-nodeConfig "$originConfigDir" "$k8sYamlDir" "$chainId" "agencyA" "$groupId" "node0"
+nodeConfig "$originConfigDir" "$k8sYamlDir" "$chainId" "agencyB" "$groupId" "node0"

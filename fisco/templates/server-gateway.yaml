@@ -6,7 +6,7 @@ metadata:
     tars.io/ServerName: BcosGatewayService
     tars.io/SubType: tars
     tars.io/Template: tars.cpp
-  name: _app_-bcosgatewayservice
+  name: _appl_-bcosgatewayservice
 spec:
   app: _app_
   server: BcosGatewayService
