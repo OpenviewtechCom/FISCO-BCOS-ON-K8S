@@ -121,6 +121,10 @@ kubectl apply -f "$k8sYamlDir/agencyB/gateway/service.yaml" -n "$k8sNamespace"
     ![](images/4.png)
     ![](images/5.png)
 
+> 希望fisco官方能支持 在 `nodes.json` 中使用域名。如果支持了，这里的配置可以调整为：
+```json
+{"nodes": ["agencya-bcosgatewayservice:30300", "agencyb-bcosgatewayservice:30300"]}
+```
 
 ### 8.将区块链应用归到同一个业务下
 ![](images/1.png)
