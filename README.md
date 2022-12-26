@@ -1,11 +1,24 @@
 # FISCO-BCOS-ON-K8S
 在k8s上部署fisco-bcos
 
-## [创建镜像](dockerfile)
+## 一、[创建镜像](dockerfile)
+>镜像的创建，参考了 [tars Dockerfile 说明](https://doc.tarsyun.com/#/k8s/dockerfile.md)。  
+>镜像已经push到hub.docker.com，如果需要自己制作docker镜像，请修改 `fisco/templates/`目录下模板中的镜像地址。
 
-## 在k8s上安装tars，参考：https://doc.tarsyun.com/#/k8s/install.md
+镜像列表：
+- BcosRpcService: https://hub.docker.com/repository/docker/degfy/fisco-bcos-rpc
+- BcosGatewayService: https://hub.docker.com/repository/docker/degfy/fisco-bcos-gateway
+- BcosNodeService: https://hub.docker.com/repository/docker/degfy/fisco-bcos-node
+- BcosExecutorService: https://hub.docker.com/repository/docker/degfy/fisco-bcos-executor
+- BcosMaxNodeService: https://hub.docker.com/repository/docker/degfy/fisco-bcos-max-node
 
-## 在k8s上安装FISCO-BCOS(这里只提供pro版本的安装方法, max版本的安装类似)
+## 二、在k8s上安装tars，参考：https://doc.tarsyun.com/#/k8s/install.md
+
+
+## 三、在k8s上安装FISCO-BCOS
+> 这里只提供pro版本的安装方法, max版本的安装类似
+
+依赖工具：kubectl
 
 ### 1.下载官方 BcosBuilder 工具
 ```shell
